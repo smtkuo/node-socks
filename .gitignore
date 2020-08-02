@@ -1,3 +1,4 @@
 /ignore
-
+/.gitignore
 /node_modules
+/.npmignore

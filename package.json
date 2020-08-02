@@ -1,18 +1,38 @@
 {
-    "name": "@sansamour/node-socks"
-  , "version": "1.0.0"
-  , "description": "A simple SOCKS/HTTP/HTTPS proxy implementation"
-  , "author": "Gert Van Gool <gertvangool@gmail.com>"
-  , "contributors": [
+  "name": "@sansamour/node-socks",
+  "version": "1.0.0",
+  "description": "A simple SOCKS/HTTP/HTTPS proxy implementation",
+  "author": "Gert Van Gool <gertvangool@gmail.com>",
+  "contributors": [
     "John Cant <a.johncant@gmail.com>",
-	"sunnyboy00 <gc063tzf@163.com>",
+    "sunnyboy00 <gc063tzf@163.com>",
     "Hoi Hoang <hoidhxd@gmail.com>"
-  ]
-  , "devDependencies": {
-	"domain": "^0.0.1",
-	"request-promise": "^4.2.6",
-	"socks": "^2.3.3",
-	"socks-proxy-agent": "^5.0.0"
-  }
-  , "main": "index.js"
+  ],
+  "devDependencies": {
+    "domain": "^0.0.1",
+    "http-proxy-agent": "^4.0.1",
+    "https-proxy-agent": "^5.0.0",
+    "request": "^2.88.2",
+    "request-promise": "^4.2.6",
+    "socks-proxy-agent": "^5.0.0"
+  },
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },  
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sansamour/node-socks.git"
+  },
+  "keywords": [
+    "socks"
+  ],
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sansamour/node-socks/issues"
+  },
+  "homepage": "https://github.com/sansamour/node-socks#readme"
 }
