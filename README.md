@@ -12,8 +12,8 @@ You can run it easily as:
 
 >  node ./test/httpproxy.js
 
+Under windows you can run run.vbs
 
-under windows you can run run.vbs
 This will create a proxy socks5 at ``127.0.0.1`` on port ``8888``.
 
 This will create a proxy socks4 socks4a at ``127.0.0.1`` on port ``9999``.
@@ -65,6 +65,8 @@ Options
     * **info** < _object_ > {_srcAddr_, _srcPort_, _dstAddr_, _dstPort_, _numClients_}
 	
 * **ssh** - < _object_ > {_host_, _port_, _username_, _password_}
+
+* **timeout** (< _number_ > miliseconds) default: 60000
 
 ## Quick Start Example
 
