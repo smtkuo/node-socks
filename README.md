@@ -21,9 +21,10 @@ You can use this as a good starting point for writing a proxy or a tunnel!
 
 * Supports SOCKS v4, v4a, and v5 proxy.
 * Supports HTTP/HTTPS proxy.
-* Supports the CONNECT, BIND, and ASSOCIATE for SOCKS v5.
+* Supports the CONNECT and ASSOCIATE for SOCKS v5.
 * Supports user/pass authentication.
 * Supports Banned IPs.
+* Supports SSH relay (since v1.1.0).
 
 ## Installation
 
@@ -86,6 +87,21 @@ socks4.createServer({
 	},
 	port: 8888,
 	fileBannedIPs: './ip.txt'
+});
+```
+
+SSH relay example
+```javascript
+const { socks5 } = require('@sansamour/node-socks')
+
+socks5.createServer({	
+	port: 9999,
+	ssh:{
+	    host: '103.92.28.100',
+	    port: 22,
+	    username: 'root',
+	    password: 'xxxx'
+	}
 });
 ```
 
