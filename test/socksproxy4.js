@@ -42,7 +42,18 @@ d.run(function() {
     // The server accepts SOCKS connections. This particular server acts as a proxy.
     var server4 = socks4.createServer({authorization:function(u){
 		  return u=='user'
-	},fileBannedIPs:'./ip.txt'});
+	},fileBannedIPs:'./ip.txt',onAccept:function(socket, info, accept, deny){
+		console.log(info)
+		//if(info.srcAddr == '::ffff:127.0.0.1'){
+		//	return deny()
+		//}
+		accept();
+	},ssh:{
+	  host: '103.92.28.100',
+	  port: 22,
+	  username: 'root',
+	  password: 'xxxxx'
+	}});
     
   }
 });

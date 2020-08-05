@@ -31,5 +31,16 @@ if (cluster.isMaster) {
 } else {
   http.createServer({authorization:function(u,p){
 	  return u=='user' && p=='pass'
-  },fileBannedIPs:'./ip.txt'});
+  },fileBannedIPs:'./ip.txt',onAccept:function(socket, info, accept, deny){
+		console.log(info)
+		if(info.srcAddr == '::ffff:127.0.0.1'){
+			//return deny()
+		}
+		accept();
+	}/*,ssh:{
+	  host: '103.92.28.100',
+	  port: 22,
+	  username: 'root',
+	  password: 'xxxxxx'
+	}*/});
 }

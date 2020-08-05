@@ -40,7 +40,23 @@ import { http, socks4, socks5 } from '@sansamour/node-socks';
 
 // Legacy JavaScript
 const socks5 = require('@sansamour/node-socks').socks5;
+
+http.createServer(options);
+socks4.createServer(options);
+socks5.createServer(options);
 ```
+
+Options
+-------
+
+* **authorization** - (< _function_ >validateUserPassword) A function with two parameters (_user_, _password_).
+
+* **fileBannedIPs** - File location with content banned IPs semicolon separated.
+
+* **onAccept** - A callback function with four parameters (_socket_, _info_, _accept_, _deny_)
+    * **info** < _object_ > {_srcAddr_, _srcPort_, _dstAddr_, _dstPort_, _numClients_}
+	
+* **ssh** - < _object_ > {_host_, _port_, _username_, _password_}
 
 ## Quick Start Example
 
@@ -73,7 +89,12 @@ socks4.createServer({
 });
 ```
 
+Associate Example (UDP Relay) with SOCKS v5
+
 ## Further Reading:
+
+Detail about this package.
+http://tutorialspots.com/nodejs-create-socks4socks4asocks5httphttps-proxy-server-with-authentication-5653.html
 
 Please read the SOCKS 5 specifications for more information on how to use Associate.
 http://www.ietf.org/rfc/rfc1928.txt

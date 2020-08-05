@@ -5,7 +5,9 @@ const associateOptions = {
   proxy: {
     host: '127.0.0.1', // ipv4, ipv6, or hostname
     port: 8888,
-    type: 5
+    type: 5,
+	userId: 'user', 
+    password: 'pass' 
   },
 
   command: 'associate',
@@ -60,6 +62,11 @@ udpSocket.on('listening', () => {
       data: Buffer.from('hello')
     });
     udpSocket.send(packet, info.remoteHost.port, info.remoteHost.host);
+	
+	setTimeout(function(){
+		udpSocket.close()
+		process.exit()
+	},2000)
   });
 
   // Start connection

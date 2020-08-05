@@ -1,7 +1,7 @@
 var rp = require('request-promise')
 var SocksProxyAgent  = require('socks-proxy-agent')
 
-var proxy = "socks4a://user:pass@127.0.0.1:8124" //9999
+var proxy = "socks4a://user:pass@127.0.0.1:9999" //9999 8124
 
 var agent = new SocksProxyAgent(proxy);
 

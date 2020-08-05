@@ -13,9 +13,6 @@ var options = {
 	}
 }
 
-
 rp(options).then((responce)=>{
 	console.log(responce)  
 }).catch(console.log)
-	 
-	
