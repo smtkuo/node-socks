@@ -114,10 +114,10 @@ socks5.createServer({
 
 Example with onAccept: limit number of clients 
 
-```
+```javascript
     onAccept:function(socket, info, accept, deny){
 		console.log(info)
-		if(numClients > 100){
+		if(info.numClients > 100){
 			return deny()
 		}
 		accept();
